@@ -1,0 +1,26 @@
+module periodictable {
+    yang-version 1;
+    namespace "urn:opendaylight:params:xml:ns:yang:periodictable";
+    prefix "PeriodicTable";
+
+    revision "2015-01-05" {
+        description "Initial revision of messenger model";
+    }
+    grouping periodic-element {
+
+        leaf element-id {
+            description "element Id";
+            type string;
+            mandatory true;
+        }
+        leaf symbol {
+            description "element symbole";
+            type string;
+        }
+        leaf atomicWeight {
+            description "element atomic weight";
+            type string;
+        }
+    }
+
+}

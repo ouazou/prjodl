@@ -1,0 +1,24 @@
+module periodictable-rpc {
+    yang-version 1;
+    namespace "urn:opendaylight:params:xml:ns:yang:periodictable:rpc";
+    prefix "periodictable-rpc";
+
+    revision "2015-01-05" {
+        description "Initial revision of messenger RPC model";
+    }
+
+    import periodictable { prefix "periodictable"; revision-date "2015-01-05"; }
+
+    rpc get-element {
+            description
+                "Send a element";
+            input {
+                leaf element-id {
+                                type string;
+                            }
+            }
+            output {
+               uses  periodictable:periodic-element;
+            }
+        }
+}
