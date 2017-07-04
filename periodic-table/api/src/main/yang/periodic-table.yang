@@ -7,20 +7,100 @@ module periodictable {
         description "Initial revision of messenger model";
     }
     grouping periodic-element {
-
-        leaf element-id {
-            description "element Id";
+        leaf atomicNumber {
+            description "element atomic Number";
             type string;
             mandatory true;
         }
+        leaf element {
+            description "element name";
+            type string;
+        }
         leaf symbol {
-            description "element symbole";
+            description "element symbol";
             type string;
         }
+
         leaf atomicWeight {
-            description "element atomic weight";
-            type string;
-        }
+                    description "element atomic weight";
+                    type string;
+                }
+        leaf period {
+                    description "element period";
+                    type string;
+                }
+        leaf group {
+                    description "element group";
+                    type string;
+                }
+        leaf phase {
+                    description "element phase";
+                    type string;
+                }
+        leaf mostStableCrystal {
+                    description "element most stable crystal";
+                    type string;
+                }
+        leaf type {
+                    description "element type";
+                    type string;
+                }
+        leaf ionicRadius {
+                    description "element ionic radius";
+                    type string;
+                }
+        leaf atomicRadius {
+                    description "element atomic radius";
+                    type string;
+                }
+        leaf electroNegativity {
+                    description "element electro negativity";
+                    type string;
+                }
+        leaf firstIonizationPotential {
+                    description "element first ionization potential";
+                    type string;
+                }
+        leaf density {
+                    description "element density";
+                    type string;
+                }
+        leaf meltingPoint {
+                    description "element melting point";
+                    type string;
+                }
+        leaf boilingPoint {
+                    description "element boiling point";
+                    type string;
+                }
+        leaf isotopes {
+                    description "element isotopes";
+                    type string;
+                }
+        leaf discoverer {
+                    description "element discoverer";
+                    type string;
+                }
+        leaf yearOfDiscovery {
+                    description "element year of discovery";
+                    type string;
+                }
+        leaf specificHeatCapacity {
+                    description "element specific heat capacity";
+                    type string;
+                }
+        leaf electronConfiguration {
+                    description "element electron configuration";
+                    type string;
+                }
+        leaf displayRow {
+                    description "element display row";
+                    type string;
+                }
+        leaf displayColumn {
+                    description "element display column";
+                    type string;
+                }
     }
 
 }

@@ -13,8 +13,8 @@ module periodictable-rpc {
             description
                 "Send a element";
             input {
-                leaf element-id {
-                                type string;
+                leaf atomicNumber {
+                                type int32;
                             }
             }
             output {
