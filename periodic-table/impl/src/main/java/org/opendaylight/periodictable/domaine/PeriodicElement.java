@@ -17,7 +17,9 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import org.opendaylight.periodictable.tools.NumberConverterTools;
 
 /**
- * Created by ouazou on 2017-06-28.
+ * Main resource class.
+ *
+ * @author ouazou on 2017-06-28.
  */
 public class PeriodicElement {
 
@@ -375,8 +377,10 @@ public class PeriodicElement {
 
 
         /**
+         * Set  the atomicNumber parameter.
+         *
          * @param atomicNumber of type int
-         * @return PeriodicElementBuilder
+         * @return the current PeriodicElementBuilder instance
          */
         public PeriodicElementBuilder atomicNumber(String atomicNumber) {
             this.atomicNumber = NumberConverterTools.convert2Int(atomicNumber);
@@ -384,8 +388,10 @@ public class PeriodicElement {
         }
 
         /**
+         * Set the element parameter.
+         *
          * @param element of type String
-         * @return PeriodicElementBuilder
+         * @return the current PeriodicElementBuilder instance
          */
         public PeriodicElementBuilder element(String element) {
             this.element = StringUtils.trimToNull(element);
@@ -394,8 +400,10 @@ public class PeriodicElement {
 
 
         /**
+         * Set the symbol parameter.
+         *
          * @param symbol of type String
-         * @return PeriodicElementBuilder
+         * @return the current PeriodicElementBuilder instance
          */
         public PeriodicElementBuilder symbol(String symbol) {
             this.symbol = StringUtils.trimToNull(symbol);
@@ -403,8 +411,10 @@ public class PeriodicElement {
         }
 
         /**
+         * Set the the atomicWeight parameter.
+         *
          * @param atomicWeight of type String
-         * @return PeriodicElementBuilder
+         * @return the current PeriodicElementBuilder instance
          */
         public PeriodicElementBuilder atomicWeight(String atomicWeight) {
             this.atomicWeight = NumberConverterTools.convert2Float(atomicWeight);
@@ -412,8 +422,10 @@ public class PeriodicElement {
         }
 
         /**
+         * Set the period parameter.
+         *
          * @param period of type String
-         * @return PeriodicElementBuilder
+         * @return the current PeriodicElementBuilder instance
          */
         public PeriodicElementBuilder period(String period) {
             this.period = NumberConverterTools.convert2Int(period);
@@ -421,8 +433,10 @@ public class PeriodicElement {
         }
 
         /**
+         * Set the group parameter.
+         *
          * @param group of type String
-         * @return PeriodicElementBuilder
+         * @return the current PeriodicElementBuilder instance
          */
         public PeriodicElementBuilder group(String group) {
             this.group = NumberConverterTools.convert2Int(group);
@@ -430,8 +444,10 @@ public class PeriodicElement {
         }
 
         /**
+         * Set the phase parameter.
+         *
          * @param phase of type String
-         * @return PeriodicElementBuilder
+         * @return the current PeriodicElementBuilder instance
          */
         public PeriodicElementBuilder phase(String phase) {
             this.phase = PeriodicElement.PhaseEnum.fromValue(phase);
@@ -439,8 +455,10 @@ public class PeriodicElement {
         }
 
         /**
+         * Set the mostStableCrystal parameter.
+         *
          * @param mostStableCrystal of type String
-         * @return PeriodicElementBuilder
+         * @return the current PeriodicElementBuilder instance
          */
         public PeriodicElementBuilder mostStableCrystal(String mostStableCrystal) {
             this.mostStableCrystal =
@@ -450,8 +468,10 @@ public class PeriodicElement {
         }
 
         /**
+         * Set the type parameter.
+         *
          * @param type of type String
-         * @return PeriodicElementBuilder
+         * @return the current PeriodicElementBuilder instance
          */
         public PeriodicElementBuilder type(String type) {
             this.type = PeriodicElement.TypeEnum.fromValue(type);
@@ -459,8 +479,10 @@ public class PeriodicElement {
         }
 
         /**
+         * Set the ionicRadius parameter.
+         *
          * @param ionicRadius of type String
-         * @return PeriodicElementBuilder
+         * @return the current PeriodicElementBuilder instance
          */
         public PeriodicElementBuilder ionicRadius(String ionicRadius) {
             this.ionicRadius = NumberConverterTools.convert2Float(ionicRadius);
@@ -468,8 +490,10 @@ public class PeriodicElement {
         }
 
         /**
+         * Set the atomicRadius parameter.
+         *
          * @param atomicRadius of type String
-         * @return PeriodicElementBuilder
+         * @return the current PeriodicElementBuilder instance
          */
         public PeriodicElementBuilder atomicRadius(String atomicRadius) {
             this.atomicRadius = NumberConverterTools.convert2Float(atomicRadius);
@@ -477,8 +501,10 @@ public class PeriodicElement {
         }
 
         /**
+         * Set the electroNegativity parameter.
+         *
          * @param electroNegativity of type String
-         * @return PeriodicElementBuilder
+         * @return the current PeriodicElementBuilder instance
          */
         public PeriodicElementBuilder electroNegativity(String electroNegativity) {
             this.electroNegativity = NumberConverterTools.convert2Float(electroNegativity);
@@ -486,8 +512,10 @@ public class PeriodicElement {
         }
 
         /**
+         * Set the firstIonizationPotential parameter.
+         *
          * @param firstIonizationPotential of type String
-         * @return PeriodicElementBuilder
+         * @return the current PeriodicElementBuilder instance
          */
         public PeriodicElementBuilder firstIonizationPotential(String firstIonizationPotential) {
             this.firstIonizationPotential =
@@ -496,8 +524,10 @@ public class PeriodicElement {
         }
 
         /**
+         * Set the density parameter.
+         *
          * @param density of type String
-         * @return PeriodicElementBuilder
+         * @return the current PeriodicElementBuilder instance
          */
         public PeriodicElementBuilder density(String density) {
             this.density = NumberConverterTools.convert2Float(density);
@@ -505,8 +535,10 @@ public class PeriodicElement {
         }
 
         /**
+         * Set the meltingPoint parameter.
+         *
          * @param meltingPoint of type String
-         * @return PeriodicElementBuilder
+         * @return the current PeriodicElementBuilder instance
          */
         public PeriodicElementBuilder meltingPoint(String meltingPoint) {
             this.meltingPoint = NumberConverterTools.convert2Float(meltingPoint);
@@ -514,8 +546,10 @@ public class PeriodicElement {
         }
 
         /**
+         * Set the boilingPoint parameter.
+         *
          * @param boilingPoint of type String
-         * @return PeriodicElementBuilder
+         * @return the current PeriodicElementBuilder instance
          */
         public PeriodicElementBuilder boilingPoint(String boilingPoint) {
             this.boilingPoint = NumberConverterTools.convert2Float(boilingPoint);
@@ -523,8 +557,10 @@ public class PeriodicElement {
         }
 
         /**
+         * Set the isotopes parameter.
+         *
          * @param isotopes of type String
-         * @return PeriodicElementBuilder
+         * @return the current PeriodicElementBuilder instance
          */
         public PeriodicElementBuilder isotopes(String isotopes) {
             this.isotopes = NumberConverterTools.convert2Int(isotopes);
@@ -532,8 +568,10 @@ public class PeriodicElement {
         }
 
         /**
+         * Set the discoverer parameter.
+         *
          * @param discoverer of type String
-         * @return PeriodicElementBuilder
+         * @return the current PeriodicElementBuilder instance
          */
         public PeriodicElementBuilder discoverer(String discoverer) {
             this.discoverer = StringUtils.trimToNull(discoverer);
@@ -541,8 +579,10 @@ public class PeriodicElement {
         }
 
         /**
+         * Set the yearOfDiscovery parameter.
+         *
          * @param yearOfDiscovery of type String
-         * @return PeriodicElementBuilder
+         * @return the current PeriodicElementBuilder instance
          */
         public PeriodicElementBuilder yearOfDiscovery(String yearOfDiscovery) {
             this.yearOfDiscovery = NumberConverterTools.convert2Int(yearOfDiscovery);
@@ -550,8 +590,10 @@ public class PeriodicElement {
         }
 
         /**
+         * Set the specificHeatCapacity parameter.
+         *
          * @param specificHeatCapacity of type String
-         * @return PeriodicElementBuilder
+         * @return the current PeriodicElementBuilder instance
          */
         public PeriodicElementBuilder specificHeatCapacity(String specificHeatCapacity) {
             this.specificHeatCapacity = NumberConverterTools.convert2Float(specificHeatCapacity);
@@ -559,8 +601,10 @@ public class PeriodicElement {
         }
 
         /**
+         * Set the electronConfiguration parameter.
+         *
          * @param electronConfiguration of type String
-         * @return PeriodicElementBuilder
+         * @return the current PeriodicElementBuilder instance
          */
         public PeriodicElementBuilder electronConfiguration(String electronConfiguration) {
             this.electronConfiguration = StringUtils.trimToNull(electronConfiguration);
@@ -568,8 +612,10 @@ public class PeriodicElement {
         }
 
         /**
+         * Set the displayRow parameter.
+         *
          * @param displayRow of type String
-         * @return PeriodicElementBuilder
+         * @return the current PeriodicElementBuilder instance
          */
         public PeriodicElementBuilder displayRow(String displayRow) {
             this.displayRow = NumberConverterTools.convert2Int(displayRow);
@@ -577,8 +623,10 @@ public class PeriodicElement {
         }
 
         /**
+         * * Set the displayColumn parameter.
+         *
          * @param displayColumn of type String
-         * @return PeriodicElementBuilder
+         * @return the current PeriodicElementBuilder instance
          */
         public PeriodicElementBuilder displayColumn(String displayColumn) {
             this.displayColumn = NumberConverterTools.convert2Int(displayColumn);

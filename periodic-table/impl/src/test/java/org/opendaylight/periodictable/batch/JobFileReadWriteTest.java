@@ -49,8 +49,15 @@ public class JobFileReadWriteTest {
                                       ConvertingTool.FORMAT_TO_JSON));
         }
         writer.close();
-        Assert.assertTrue(FileUtils.readFileToString(new File(FileWriter.OUTPUT_FOLDER+"/file.json")).contains(
-            "{\"atomicNumber\":1,\"element\":null,\"symbol\":\"H\",\"atomicWeight\":1.00794,\"period\":1,\"group\":1,\"phase\":\"gas\",\"mostStableCrystal\":\"bcc\",\"type\":null,\"ionicRadius\":0.012,\"atomicRadius\":0.79,\"electroNegativity\":2.2,\"firstIonizationPotential\":13.5984,\"density\":8.988E-5,\"meltingPoint\":14.175,\"boilingPoint\":20.28,\"isotopes\":3,\"discoverer\":\"Cavendish\",\"yearOfDiscovery\":1766,\"specificHeatCapacity\":14.304,\"electronConfiguration\":null,\"displayRow\":1,\"displayColumn\":1}"));
+        Assert.assertTrue(
+            FileUtils.readFileToString(new File(FileWriter.OUTPUT_FOLDER + "/file.json")).contains(
+                "{\"atomicNumber\":1,\"element\":null,\"symbol\":\"H\",\"atomicWeight\":1.00794,"
+                + "\"period\":1,\"group\":1,\"phase\":\"gas\",\"mostStableCrystal\":\"bcc\",\"type\":null,"
+                + "\"ionicRadius\":0.012,\"atomicRadius\":0.79,\"electroNegativity\":2.2,"
+                + "\"firstIonizationPotential\":13.5984,\"density\":8.988E-5,\"meltingPoint\":14.175,"
+                + "\"boilingPoint\":20.28,\"isotopes\":3,\"discoverer\":\"Cavendish\","
+                + "\"yearOfDiscovery\":1766,\"specificHeatCapacity\":14.304,\"electronConfiguration\":null,"
+                + "\"displayRow\":1,\"displayColumn\":1}"));
     }
 
     @Test
@@ -67,8 +74,18 @@ public class JobFileReadWriteTest {
 
         writer.close();
 
-        Assert.assertTrue(FileUtils.readFileToString(new File(FileWriter.OUTPUT_FOLDER+"/file.xml")).contains(
-            "<PeriodicElement><atomicNumber>1</atomicNumber><atomicRadius>0.79</atomicRadius><atomicWeight>1.00794</atomicWeight><boilingPoint>20.28</boilingPoint><density>8.988E-5</density><discoverer>Cavendish</discoverer><displayColumn>1</displayColumn><displayRow>1</displayRow><electroNegativity>2.2</electroNegativity><firstIonizationPotential>13.5984</firstIonizationPotential><group>1</group><ionicRadius>0.012</ionicRadius><isotopes>3</isotopes><meltingPoint>14.175</meltingPoint><mostStableCrystal>BCC</mostStableCrystal><period>1</period><phase>GAS</phase><specificHeatCapacity>14.304</specificHeatCapacity><symbol>H</symbol><yearOfDiscovery>1766</yearOfDiscovery></PeriodicElement>"));
+        Assert.assertTrue(
+            FileUtils.readFileToString(new File(FileWriter.OUTPUT_FOLDER + "/file.xml")).contains(
+                "<PeriodicElement><atomicNumber>1</atomicNumber><atomicRadius>0.79</atomicRadius>"
+                + "<atomicWeight>1.00794</atomicWeight><boilingPoint>20.28</boilingPoint>"
+                + "<density>8.988E-5</density><discoverer>Cavendish</discoverer>"
+                + "<displayColumn>1</displayColumn><displayRow>1</displayRow>"
+                + "<electroNegativity>2.2</electroNegativity>"
+                + "<firstIonizationPotential>13.5984</firstIonizationPotential><group>1</group>"
+                + "<ionicRadius>0.012</ionicRadius><isotopes>3</isotopes><meltingPoint>14.175</meltingPoint>"
+                + "<mostStableCrystal>BCC</mostStableCrystal><period>1</period><phase>GAS</phase>"
+                + "<specificHeatCapacity>14.304</specificHeatCapacity><symbol>H</symbol>"
+                + "<yearOfDiscovery>1766</yearOfDiscovery></PeriodicElement>"));
 
 
     }

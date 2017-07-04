@@ -19,7 +19,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Created by ouazou on 2017-07-02.
+ * XML/Json Conveting Utility.
+ *
+ * @author ouazou on 2017-07-02.
  */
 public class ConvertingTool {
 
@@ -27,6 +29,15 @@ public class ConvertingTool {
     public static final boolean FORMAT_TO_XML = false;
     private static final Logger LOG = LoggerFactory.getLogger(ConvertingTool.class);
 
+    /**
+     * Convert an object to Json or XML.
+     *
+     * @param object Object to convert
+     * @param clazz  Class type of the object to convert
+     * @param toJson if true convert to Json else convert to XML
+     * @param <T>    the generic type of the object to convert
+     * @return A String containing the object in Json/XML format
+     */
     public static <T> String convert(T object, Class<T> clazz, boolean toJson) {
 
         LOG.trace("Converting object {} toJson:{} ", object, toJson);

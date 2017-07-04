@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by ouazou on 2017-07-02.
+ * @author ouazou on 2017-07-02.
  */
 public class PeriodicElementRepository implements Repository<Integer, PeriodicElement> {
 

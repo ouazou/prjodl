@@ -8,9 +8,18 @@
 package org.opendaylight.periodictable.batch.component;
 
 /**
- * Created by ouazou on 2017-07-02.
+ * Mapper utility.
+ *
+ * @param <T> generic type of the resulting object
+ * @author ouazou on 2017-07-02.
  */
 public interface LineMapper<T> {
 
+    /**
+     * Convert a String  to an object of type T.
+     *
+     * @param line of type String
+     * @return Object of type T
+     */
     T map(String line);
 }

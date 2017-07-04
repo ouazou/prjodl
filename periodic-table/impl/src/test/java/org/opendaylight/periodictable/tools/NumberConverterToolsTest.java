@@ -7,8 +7,7 @@
  */
 package org.opendaylight.periodictable.tools;
 
-import static org.junit.Assert.*;
-
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
@@ -27,10 +26,10 @@ public class NumberConverterToolsTest {
     @Test
     public void testConvert2Float() throws Exception {
 
-        assertEquals(0, NumberConverterTools.convert2Float("0.000"),0.0f);
-        assertEquals(20, NumberConverterTools.convert2Float("20.000"),0.0f);
-        assertEquals(10.0f, NumberConverterTools.convert2Float("10.00"),0.0f);
-        assertEquals(0, NumberConverterTools.convert2Float(""),0.0f);
-        assertEquals(0, NumberConverterTools.convert2Float(null),0.0f);
+        assertEquals(0, NumberConverterTools.convert2Float("0.000"), 0.0f);
+        assertEquals(20, NumberConverterTools.convert2Float("20.000"), 0.0f);
+        assertEquals(10.0f, NumberConverterTools.convert2Float("10.00"), 0.0f);
+        assertEquals(0, NumberConverterTools.convert2Float(""), 0.0f);
+        assertEquals(0, NumberConverterTools.convert2Float(null), 0.0f);
     }
 }

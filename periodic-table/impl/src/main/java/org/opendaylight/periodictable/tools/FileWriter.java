@@ -9,21 +9,20 @@ package org.opendaylight.periodictable.tools;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
-import java.net.URISyntaxException;
-import java.net.URL;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Created by ouazou on 2017-07-02.
+ * Write utility to a Text file.
+ *
+ * @author ouazou on 2017-07-02.
  */
 public class FileWriter {
 
     private static final Logger LOG = LoggerFactory.getLogger(FileWriter.class);
-    public static  String OUTPUT_FOLDER = "src/main/resources/";
+    public static String OUTPUT_FOLDER = "src/main/resources/";
     private PrintWriter writer;
     private String fileNameDefined;
 
@@ -31,10 +30,15 @@ public class FileWriter {
 
     }
 
+    /**
+     * Constructor.
+     *
+     * @param fileName relative path name.
+     */
     public FileWriter(String fileName) {
         LOG.debug("Opening File{} for writing.", fileName);
         this.fileNameDefined = new File(OUTPUT_FOLDER).getAbsolutePath()
-                               +fileName;
+                               + fileName;
         try {
             writer = new PrintWriter(new File(fileNameDefined), "UTF-8");
         } catch (FileNotFoundException | UnsupportedEncodingException e) {
@@ -42,10 +46,18 @@ public class FileWriter {
         }
     }
 
+    /**
+     * Write a line to the text output stream.
+     *
+     * @param line of String type.
+     */
     public void write(String line) {
         writer.println(line);
     }
 
+    /**
+     * Close the stream.
+     */
     public void close() {
         LOG.debug("Closing File{}.", fileNameDefined);
         if (writer != null) {

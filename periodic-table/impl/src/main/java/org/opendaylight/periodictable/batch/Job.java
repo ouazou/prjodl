@@ -18,8 +18,7 @@ import org.slf4j.LoggerFactory;
  * Job that reads items from a stream a process them.
  *
  * @param <T> the type of elements processed.
- *
- *            Created by ouazou on 2017-07-02.
+ * @author ouazou on 2017-07-02.
  */
 
 public class Job<T> {
@@ -30,9 +29,10 @@ public class Job<T> {
     private FileItemReader<T> reader;
 
     /**
-     * Set the ItemWriter
+     * Set the ItemWriter.
      *
      * @param writer of type ItemWriter
+     * @return the current Job instance
      */
     public Job setWriter(ItemWriter<T> writer) {
         this.writer = writer;
@@ -43,6 +43,7 @@ public class Job<T> {
      * set The File Item Reader.
      *
      * @param reader of type FileItemReader
+     * @return the current Job instance
      */
     public Job setReader(FileItemReader<T> reader) {
         this.reader = reader;
@@ -59,8 +60,9 @@ public class Job<T> {
                 items.add(reader.doRead());
             }
             writer.write(items);
-        }finally {
-            reader.close();        }
+        } finally {
+            reader.close();
+        }
 
 
     }

@@ -10,7 +10,6 @@ package org.opendaylight.periodictable.tools;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
-import java.io.Writer;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;

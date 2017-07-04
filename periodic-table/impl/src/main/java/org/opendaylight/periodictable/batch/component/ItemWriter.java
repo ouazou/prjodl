@@ -10,10 +10,18 @@ package org.opendaylight.periodictable.batch.component;
 import java.util.List;
 
 /**
- * Created by ouazou on 2017-07-02.
+ * Item writer Utility.
+ *
+ * @param <T> item type to be write to stream
+ * @author ouazou on 2017-07-02.
  */
 public interface ItemWriter<T> {
 
+    /**
+     * Write a list of objects to a stream.
+     *
+     * @param items of type T
+     */
     void write(List<T> items);
 
 }

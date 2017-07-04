@@ -18,7 +18,7 @@ public class FileItemReaderTest {
 
     @Before
     public void setup() {
-        FileItemReader.INPUT_FOLDER="src/test/resources/csv/";
+        FileItemReader.INPUT_FOLDER = "src/test/resources/csv/";
         itemReader = new FileItemReader<>("/car.csv", new LineMapper<Car>() {
             @Override
             public Car map(String line) {
@@ -48,7 +48,7 @@ public class FileItemReaderTest {
         Assert.assertEquals(false, itemReader.hasNext());
     }
 
-    @Test(expected =IllegalStateException.class )
+    @Test(expected = IllegalStateException.class)
     public void testClose() throws Exception {
         itemReader.close();
         itemReader.hasNext();

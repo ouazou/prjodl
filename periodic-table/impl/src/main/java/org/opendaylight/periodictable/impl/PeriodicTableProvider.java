@@ -18,6 +18,7 @@ import org.opendaylight.periodictable.domaine.PeriodicElement;
 import org.opendaylight.periodictable.domaine.PeriodicElementRepository;
 import org.opendaylight.periodictable.domaine.Repository;
 import org.opendaylight.periodictable.tools.ConvertingTool;
+import org.opendaylight.periodictable.tools.FileWriter;
 import org.opendaylight.yang.gen.v1.urn.opendaylight.params.xml.ns.yang.periodictable.rpc.rev150105.PeriodictableRpcService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,7 +26,9 @@ import org.slf4j.LoggerFactory;
 public class PeriodicTableProvider {
 
     public static final String
-        CSV_DATA_CSV ="/csv/data.csv";
+        CSV_DATA_CSV = "/csv/data.csv";
+    public static final String FILE_XML_NAME = "/file.xml";
+    public static final String FILE_JSON_NAME = "/file.json";
     private static final Logger LOG = LoggerFactory.getLogger(PeriodicTableProvider.class);
     private final DataBroker dataBroker;
     private final RpcProviderRegistry rpcProviderRegistry;
@@ -50,17 +53,28 @@ public class PeriodicTableProvider {
         LOG.info("PeriodicTableProvider Session Initiated");
         loadData();
         logInfoData();
+        produceJson();
+        produceXml();
         LOG.info("PeriodicTableProvider Session Initiated");
     }
 
-    private void logJson() {
-        LOG.info("logging out data...................");
+    private void produceJson() {
+        LOG.info("Write Json objects to file ...................");
+        FileWriter writer = new FileWriter(FILE_JSON_NAME);
         for (PeriodicElement element : instance.findAll()) {
+            writer.write(ConvertingTool
+                             .convert(element, PeriodicElement.class,
+                                      ConvertingTool.FORMAT_TO_JSON));
+        }
+    }
 
-            LOG.info("PeriodicElement {}",
-                     ConvertingTool
-                         .convert(element, PeriodicElement.class, ConvertingTool.FORMAT_TO_JSON));
-
+    private void produceXml() {
+        LOG.info("Write Json objects to file ...................");
+        FileWriter writer = new FileWriter(FILE_XML_NAME);
+        for (PeriodicElement element : instance.findAll()) {
+            writer.write(ConvertingTool
+                             .convert(element, PeriodicElement.class,
+                                      ConvertingTool.FORMAT_TO_XML));
         }
     }
 

@@ -13,7 +13,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Created by ouazou on 2017-07-02.
+ * Mapper utility.
+ *
+ * @author ouazou on 2017-07-02.
  */
 public class PeriodicElementMapper implements LineMapper<PeriodicElement> {
 

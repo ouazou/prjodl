@@ -58,7 +58,6 @@ public class PeriodicElementMapperTest {
     }
 
 
-
     @Test
     public void mapValidationOfaValidLineWithOutData() throws Exception {
 

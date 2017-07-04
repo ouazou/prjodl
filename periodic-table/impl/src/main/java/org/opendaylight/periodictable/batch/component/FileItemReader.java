@@ -14,20 +14,21 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * File items read. Read items of Type T from a text file. Created by ouazou on 2017-07-02.
+ * File items read. Read items of Type T from a text file.
  *
  * @param <T> the type of elements read.
+ * @author ouazou on 2017-07-02.
  */
 public class FileItemReader<T> {
 
     private static final Logger LOG = LoggerFactory.getLogger(FileItemReader.class);
-    public static  String INPUT_FOLDER = "src/main/resources/";
+    public static String INPUT_FOLDER = "src/main/resources/";
     private Scanner lineScanner;
     private String fileNameDefined;
     private LineMapper<T> lineMapper;
 
     /**
-     * Constructor
+     * Constructor.
      *
      * @param fileName   path of the file stream
      * @param lineMapper Mapper extract the object of type T
@@ -35,7 +36,7 @@ public class FileItemReader<T> {
     public FileItemReader(String fileName, LineMapper<T> lineMapper) {
         LOG.debug("Opening File{} for reading.", fileName);
         this.fileNameDefined = new File(INPUT_FOLDER).getAbsolutePath()
-                               +fileName;
+                               + fileName;
         this.lineMapper = lineMapper;
         try {
             lineScanner = new Scanner(new File(fileNameDefined));
@@ -45,7 +46,7 @@ public class FileItemReader<T> {
     }
 
     /**
-     * Read un object from text file;
+     * Read un object from text file.
      *
      * @return object of Type T
      */
